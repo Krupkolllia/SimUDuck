@@ -1,6 +1,6 @@
-public class Squeak implements MakingSoundBehavior {
+public class Squeak implements QuackBehavior {
     @Override
-    public void makeSound() {
+    public void quack() {
         System.out.println("Squeak!");
     }
 }

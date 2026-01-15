@@ -1,13 +1,26 @@
-abstract class Duck {
-    protected final FlyBehavior flyBehavior;
-    protected final MakingSoundBehavior makingSoundBehavior;
+public abstract class Duck {
+    protected FlyBehavior flyBehavior;
+    protected QuackBehavior quackBehavior;
 
-    public Duck(FlyBehavior flyBehavior, MakingSoundBehavior makingSoundBehavior) {
-        this.flyBehavior = flyBehavior;
-        this.makingSoundBehavior = makingSoundBehavior;
+    public abstract void display();
+
+    public void performFly() {
+        flyBehavior.fly();
     }
 
-    void display() {
-        System.out.println(this.getClass().getName() + " displays");
+    public void performQuack() {
+        quackBehavior.quack();
+    }
+
+    public void swim() {
+        System.out.println("All duck float, even decoys!");
+    }
+
+    public void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+
+    public void setQuackBehavior(QuackBehavior qb) {
+        quackBehavior = qb;
     }
 }

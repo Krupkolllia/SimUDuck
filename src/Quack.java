@@ -1,6 +1,6 @@
-public class Quack implements MakingSoundBehavior {
+public class Quack implements QuackBehavior {
     @Override
-    public void makeSound() {
+    public void quack() {
         System.out.println("Quack!");
     }
 }
