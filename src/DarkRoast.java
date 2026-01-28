@@ -1,4 +1,10 @@
-package PACKAGE_NAME;
+public class DarkRoast extends Beverage {
 
-public class DarkRoast {
+    public DarkRoast() {
+        description = "Most Excellent Dark Roast";
+    }
+
+    public double cost() {
+        return 4.99 + super.cost();
+    }
 }
