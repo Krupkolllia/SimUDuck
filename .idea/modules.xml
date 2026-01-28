@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SimUDuck.iml" filepath="$PROJECT_DIR$/SimUDuck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HeadFirstPatternDesigns.iml" filepath="$PROJECT_DIR$/HeadFirstPatternDesigns.iml" />
     </modules>
   </component>
 </project>
