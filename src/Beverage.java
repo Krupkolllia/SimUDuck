@@ -1,5 +1,5 @@
 public class Beverage {
-    private String description;
+    protected String description;
 
     private boolean milk = false;
     private boolean soy = false;
