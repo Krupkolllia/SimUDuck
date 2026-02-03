@@ -1,7 +1,7 @@
 public class DarkRoast extends Beverage {
 
     public DarkRoast() {
-        description = "Most Excellent Dark Roast";
+        description = "Dark Roast coffee";
     }
 
     public double cost() {
