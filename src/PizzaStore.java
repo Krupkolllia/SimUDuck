@@ -1,10 +1,4 @@
 public abstract class PizzaStore {
-    PizzaFactory factory;
-
-    public PizzaStore(PizzaFactory factory) {
-        this.factory = factory;
-    }
-
 
     public final Pizza orderPizza(String type) {
         Pizza pizza = createPizza(type);
@@ -18,4 +12,5 @@ public abstract class PizzaStore {
     }
 
     abstract Pizza createPizza(String type);
+
 }
