@@ -1,6 +1,6 @@
-public class CheezePizza extends Pizza {
+public class CheesePizza extends Pizza {
 
-    public CheezePizza() {
+    public CheesePizza() {
         name = "Cheese Pizza";
         dough = "Regular Dough";
         sauce = "Regular Sauce";
