@@ -23,7 +23,7 @@ public abstract class Pizza {
     }
 
     public void cut() {
-        System.out.println("Cutting the pizza into slices");
+        System.out.println("Cutting the pizza into diagonal slices");
     }
 
     public void box() {
