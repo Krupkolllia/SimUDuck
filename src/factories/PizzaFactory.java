@@ -1,5 +1,6 @@
-package abstracts;
+package factories;
 
+import abstracts.Pizza;
 import pizzas.CheesePizza;
 import pizzas.ClamPizza;
 import pizzas.PepperoniPizza;
