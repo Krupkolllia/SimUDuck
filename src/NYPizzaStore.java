@@ -1,11 +1,11 @@
 public class NYPizzaStore extends PizzaStore {
-
-    public NYPizzaStore(PizzaFactory factory) {
-        super(factory);
-    }
-
     @Override
     Pizza createPizza(String type) {
-        return null;
+        return switch (type.toLowerCase()) {
+            case "cheese" -> new NYStyleCheesePizza();
+            // There could be other options if matching classes existed
+
+            default -> null;
+        };
     }
 }
