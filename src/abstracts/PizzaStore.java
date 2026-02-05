@@ -1,3 +1,5 @@
+package abstracts;
+
 public abstract class PizzaStore {
 
     public final Pizza orderPizza(String type) {
@@ -11,6 +13,6 @@ public abstract class PizzaStore {
         return pizza;
     }
 
-    abstract Pizza createPizza(String type);
+    protected abstract Pizza createPizza(String type);
 
 }

@@ -1,3 +1,10 @@
+package abstracts;
+
+import pizzas.CheesePizza;
+import pizzas.ClamPizza;
+import pizzas.PepperoniPizza;
+import pizzas.VeggiePizza;
+
 public class PizzaFactory {
     public Pizza createPizza(String type) {
         return switch (type.toLowerCase()) {
