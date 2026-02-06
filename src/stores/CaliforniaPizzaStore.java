@@ -2,17 +2,13 @@ package stores;
 
 import abstracts.Pizza;
 import abstracts.PizzaStore;
-import pizzas.CaliforniaStyleCheesePizza;
+import jdk.jshell.spi.ExecutionControl;
 
 public class CaliforniaPizzaStore extends PizzaStore {
 
     @Override
     protected Pizza createPizza(String type) {
-        return switch (type.toLowerCase()) {
-            case "cheese" -> new CaliforniaStyleCheesePizza();
-            // There could be other options if matching classes existed
-
-            default -> null;
-        };
+        // To be implemented...
+        return null;
     }
 }

@@ -1,17 +1,27 @@
 package stores;
 import abstracts.Pizza;
 import abstracts.PizzaStore;
-import pizzas.ChicagoStyleCheesePizza;
+import factories.ChicagoPizzaIngredientFactory;
+import factories.PizzaIngredientFactory;
+import pizzas.*;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
     @Override
     protected Pizza createPizza(String type) {
-        return switch (type.toLowerCase()) {
-            case "cheese" -> new ChicagoStyleCheesePizza();
-            // There could be other options if matching classes existed
+        PizzaIngredientFactory ingredientFactory = new ChicagoPizzaIngredientFactory();
 
-            default -> null;
+        Pizza pizza = switch (type.toLowerCase()) {
+            case "cheese" -> new CheesePizza(ingredientFactory);
+            case "clam" -> new ClamPizza(ingredientFactory);
+            case "veggie" -> new VeggiePizza(ingredientFactory);
+            case "greek" -> new GreekPizza(ingredientFactory);
+            case "pepperoni" -> new PepperoniPizza(ingredientFactory);
+            default -> throw new IllegalArgumentException("Unknown pizza type: " + type);
         };
+
+        pizza.setName("Chicago Style " + pizza.getClass().getSimpleName().replace("Pizza", "") + " Pizza");
+        return pizza;
+
     }
 }
