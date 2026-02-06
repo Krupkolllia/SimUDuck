@@ -1,11 +1,20 @@
 package pizzas;
 
 import abstracts.Pizza;
+import factories.PizzaIngredientFactory;
 
 public class VeggiePizza extends Pizza {
-    public VeggiePizza() {
-        name = "Veggie abstracts.Pizza";
-        dough = "Whole Wheat Dough";
-        sauce = "Tomato Basil Sauce";
+    PizzaIngredientFactory ingredientFactory;
+
+    public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
+
+    @Override
+    protected void prepare() {
+        System.out.println("Preparing " + name);
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        veggies = ingredientFactory.createVeggies();
     }
 }

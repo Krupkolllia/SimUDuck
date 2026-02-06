@@ -1,12 +1,22 @@
 package pizzas;
 
 import abstracts.Pizza;
+import factories.PizzaIngredientFactory;
 
 public class PepperoniPizza extends Pizza {
-    public PepperoniPizza() {
-        name = "Pepperoni abstracts.Pizza";
-        dough = "Thin Crust";
-        sauce = "Spicy Tomato Sauce";
+    PizzaIngredientFactory ingredientFactory;
+
+    public PepperoniPizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
+
+    @Override
+    protected void prepare() {
+        System.out.println("Preparing " + name);
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
+        pepperoni = ingredientFactory.createPepperoni();
     }
 }
 

@@ -2,18 +2,17 @@ package abstracts;
 
 import ingredients.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public abstract class Pizza {
-    String name;
-    Dough dough;
-    Sauce sauce;
-    Veggies[] veggies;
-    Cheese cheese;
-    Pepperoni pepperoni;
-    Clams clam;
+    protected String name;
+    protected Dough dough;
+    protected Sauce sauce;
+    protected Veggies[] veggies;
+    protected Cheese cheese;
+    protected Pepperoni pepperoni;
+    protected  Clams clam;
 
 
     protected abstract void prepare();
