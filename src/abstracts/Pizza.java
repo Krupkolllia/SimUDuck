@@ -27,7 +27,7 @@ public abstract class Pizza {
     }
 
     protected void box() {
-        System.out.println("Place pizza in official abstracts.PizzaStore box");
+        System.out.println("Place pizza in official PizzaStore box");
     }
 
 
@@ -43,16 +43,16 @@ public abstract class Pizza {
     public String toString() {
         String veggiesList = veggies != null && veggies.length > 0
                 ? Arrays.stream(veggies)
-                .map(Object::toString)
+                .map(v -> v.getClass().getSimpleName())
                 .collect(Collectors.joining(", "))
                 : "none";
 
         return name + ": \n" +
-                "Dough: " + dough + "\n" +
-                "Sauce: " + sauce + "\n" +
-                "Veggies: " + veggiesList + "\n" +
-                "Cheese: " + cheese + "\n" +
-                "Pepperoni: " + pepperoni + "\n" +
-                "Clams: " + clam;
+                "   Dough: " + (dough != null ? dough.getClass().getSimpleName() : "none") + "\n" +
+                "   Sauce: " + (sauce != null ? sauce.getClass().getSimpleName() : "none") + "\n" +
+                "   Veggies: " + veggiesList + "\n" +
+                "   Cheese: " + (cheese != null ? cheese.getClass().getSimpleName() : "none") + "\n" +
+                "   Pepperoni: " + (pepperoni != null ? pepperoni.getClass().getSimpleName() : "none") + "\n" +
+                "   Clams: " + (clam != null ? clam.getClass().getSimpleName() : "none");
     }
 }
