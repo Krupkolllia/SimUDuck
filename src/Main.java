@@ -1,8 +1,9 @@
 public class Main {
-    int i;
-
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+        ChocolateBoiler chocolateBoiler = ChocolateBoiler.getInstance();
+        chocolateBoiler.fill();
+        chocolateBoiler.boil();
+        chocolateBoiler.drain();
     }
 
 }
